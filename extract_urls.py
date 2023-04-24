@@ -4,7 +4,7 @@ with open('ril_export.html', 'r', encoding='utf-8') as file:
 
 # extract the urls
 import re
-urls = re.findall('https?://(?:[-\w.]|(?:%[\da-fA-F]{2}))+/?[\w./%]*', html_content)
+urls = re.findall('https?://(?:[-\w.]|(?:%[\da-fA-F]{2}))+[/\w\.-]*(?:\?\S*)?', html_content)
 print(len(urls), " urls extracted")
 print()
 
